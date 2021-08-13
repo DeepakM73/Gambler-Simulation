@@ -2,10 +2,21 @@ package com.gambler;
 
 public class GamblerSimulation {
 
-    public static int INITIALSTAKE = 100;
-    public static int BET_PER_GAME = 1;
+    public static final int INITIALSTAKE = 100;
+    public static final int BET_PER_GAME = 1;
 
-    public static void main(String[] args) {
-
+    public static void stakeWinOrLoss() {
+        if(Math.random() > 0.5){
+            int win = INITIALSTAKE + 1;
+            System.out.println(" Won the bet :"+win);
+        }
+        else{
+            int loss = INITIALSTAKE - 1;
+            System.out.println(" Lost the bet :"+loss);
+    }
+}
+    public static void main(String[] args ) {
+        System.out.print("Welcome to Gamblers Simulation");
+        stakeWinOrLoss();
     }
 }
